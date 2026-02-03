@@ -1,0 +1,18 @@
+title: "Daniele Catanzaro"
+description: "Academic website"
+url: ""
+baseurl: ""
+
+nav:
+  - title: "Home"
+    url: /
+  # - title: "Research"
+  #   url: /research/
+  # - title: "Publications"
+  #   url: /publications/
+  # - title: "Teaching"
+  #   url: /teaching/
+  # - title: "Talks"
+  #   url: /talks/
+  # - title: "Contact"
+  #   url: /contact/
