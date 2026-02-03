@@ -1,0 +1,19 @@
+# Daniele Catanzaro
+
+## Professor of Discrete Optimization • Center for Operations Research & Econometrics • Université Catholique de Louvain
+
+### Short Bio
+I am Professor of Discrete Optimization and Operations Research, currently serving as President of the [Center for Operations Research and Econometrics (CORE)](https://www.uclouvain.be/en/research-institutes/lidam/core) of the [Université Catholique de Louvain](https://www.uclouvain.be/fr).
+
+I graduated summa cum laude in **Computer Science Engineering** at the [University of Palermo](https://www.unipa.it), Italy, in 2003. In 2008, I was awarded a **Ph.D. in Computer Science** from the [Université Libre de Bruxelles](https://www.ulb.be/en) for my research in discrete optimization, network design, and computational phylogenetics, conducted at the Computer Science Department, the Institute of Biology and Molecular Medicine (IBMM), and the Hospital Erasme of the same university. Before joining the Université Catholique de Louvain in 2014, I was a Chargé de Recherches of the [Belgian National Fund for Scientific Research](https://www.frs-fnrs.be/fr/) (2009-2013), Visiting Scholar at the [Tepper School of Business](https://www.cmu.edu/tepper/) and the [Computational Biology Department](https://www.danielecatanzaro.com) of [Carnegie Mellon University](https://www.cmu.edu) (2010-2012), and Assistant Professor of Discrete Optimization at the Faculty of Economics and Business of the [Rijksuniversiteit Groningen](https://www.rug.nl) (2013-2014). More recently, I have been invited as a Visiting Professor at the Department of Management at the [University Ca’ Foscari of Venice](https://www.unive.it/web/en/497/), Italy, in 2018 and again in 2024.
+
+I am serving (or recently served) as a member of the Program Committee for [ISCO 2024](https://eventos.ull.es/isco-2024/Committees), Vice-Chair for the ERC Horizon calls [HORIZON-MSCA-2025-PF-01](https://marie-sklodowska-curie-actions.ec.europa.eu/calls/msca-postdoctoral-fellowships-2025), and as Panel Member for the Canadian [NSERC/CRSNG](https://nserc-crsng.canada.ca/en/funding/review-committee/2026-discovery-research-civil-industrial-and-systems-engineering) (calls 2022-2025).
+
+[Linkedin](https://www.linkedin.com/in/danielecatanzaro/)
+
+### Research Activities
+I am a **computer scientist** and an **applied mathematician**.
+
+My research focuses on the foundational theory and algorithmic development for **combinatorial optimization** and **integer programming**.  I am particularly interested in advancing both **exact** and **approximate** methods for optimization over integers, aiming to deepen theoretical insights while designing effective and scalable algorithms for NP-hard problems arising in real-world applications. My work has addressed a range of topics so far, including linear, nonlinear, and uncertain **network design**; **coloring**, **covering**, and **partitioning**; **routing**; (versions of) the **traveling salesman** and the **quadratic assignment problems**; and the **optimization of exponential functions over discrete domains** (e.g., entropy-based models, optimal embedding trees). I have been interested in the applications of discrete optimization to **bioinformatics**, with particular focus on tumorigenesis and genome-wide association studies. In recent years, my research has focused intensively on the **combinatorial and optimization aspects of phylogenetics**, contributing to the development of distance-based methods, specifically [minimum evolution](https://en.wikipedia.org/wiki/Minimum_evolution) and [balanced minimum evolution](https://www.sciencedirect.com/science/article/pii/S0377221721006718).
+
+My research activities have been supported by the **European Marie Curie Fellowship Program**, **Belgian National Fund for Scientific Research (FNRS)**, the **Louvain Foundation**, the **U.S. National Institutes of Health (NIH)**, the **Belgian American Educational Foundation (BAEF)**.
