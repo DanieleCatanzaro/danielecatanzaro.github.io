@@ -36,6 +36,15 @@ body {
 ol, ul {
   list-style: none; }
 
+ul {
+  list-style: disc !important;
+  padding-left: 1.2em !important;  /* aumenta/diminuisci */
+}
+ul li {
+  padding-left: 0.5em !important;
+}
+
+
 blockquote, q {
   quotes: none; }
   blockquote:before, blockquote:after, q:before, q:after {
