@@ -107,7 +107,10 @@ body, input, select, textarea {
       font-size: 10pt; } }
   @media screen and (max-width: 360px) {
     body, input, select, textarea {
-      font-size: 9pt; } }
+      font-size: 11pt; 
+      line-height: 1.7;
+    }
+  }
 
 a {
   -moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
