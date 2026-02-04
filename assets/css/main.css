@@ -2200,6 +2200,20 @@ button,
     #banner .image {
       max-height: 35vh; } }
 
+/* iPad/tablet in portrait: lascia l'immagine alla sua altezza naturale */
+@media screen and (orientation: portrait) and (min-width: 481px) and (max-width: 1324px) {
+  #banner .image {
+    height: auto;
+    max-height: none;
+    min-height: 0;
+  }
+
+  #banner .image img {
+    height: auto;
+    object-fit: contain; /* evita il crop; può creare “bande” se necessario */
+  }
+}
+
 /* Footer */
 #footer .copyright {
   color: #9fa3a6;
