@@ -1,0 +1,14 @@
+Typos.txt
+
+1. Table 1 in both
+
+	D. Catanzaro, R. Aringhieri, M. Di Summa, and R. Pesenti. A branch-price-and-cut algorithm for the minimum evolution problem. European Journal of Operational Research 244(3), 753–765, 2015
+
+	and
+
+	R. Aringhieri, D. Catanzaro, and M. Di Summa. Optimal solutions for the balanced minimum evolution problem. Computers and Operations Research, 38(12), 1845--1854, 2011
+
+	contains the following two cut and paste typos:
+
+   - 4 unlabeled phylogenies for n=8 
+   - 6 unlabeled phylogenies for n=9
