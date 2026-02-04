@@ -1,0 +1,3 @@
+TyposBMEP.txt
+
+Equation (16) after the first '=' the union is for s in [2,n-1], not r. 
