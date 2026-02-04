@@ -1,0 +1,1 @@
+Page 2 Algorithm 1: while condition (lines 6-10) inside if
