@@ -2370,7 +2370,7 @@ a:hover {
 }
 
 #header{
-  position: -webkit-sticky; /* iOS */
+  /*position: -webkit-sticky; /* iOS */*/
   position: sticky;
   top: env(safe-area-inset-top, 0px); /* copre notch/status bar */
   z-index: 1000;
@@ -2381,8 +2381,6 @@ a:hover {
   /* evita “fessure” di rendering su iOS */
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
-
-  padding-top: env(safe-area-inset-top, 0px);
 }
 
 @media screen and (max-width: 736px){
@@ -2390,5 +2388,5 @@ a:hover {
 }
 
 #main > .inner{
-  padding-top: calc(1.5em + env(safe-area-inset-top));
+  padding-top: calc(0.5em + env(safe-area-inset-top));
 }
