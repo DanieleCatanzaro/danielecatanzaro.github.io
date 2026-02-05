@@ -2388,6 +2388,10 @@ a:hover {
   padding-top: env(safe-area-inset-top, 0px);
 }
 
-#main > .inner{
-  padding-top: 2.5em; /* regola finché combacia */
+@media screen and (max-width: 736px){
+  #header{ padding-top: 0 !important; }
 }
+
+/*#main > .inner{
+  padding-top: 2.5em; /* regola finché combacia */
+}*/
