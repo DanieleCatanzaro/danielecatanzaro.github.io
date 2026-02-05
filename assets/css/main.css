@@ -2066,7 +2066,7 @@ button,
         display: none; } }
   @media screen and (max-width: 736px) {
     #header {
-      padding-top: 15em;
+      padding-top: 5em;
     }
     #sidebar .toggle {
       text-indent: 7.25em;
