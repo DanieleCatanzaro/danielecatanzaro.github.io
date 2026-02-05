@@ -2176,7 +2176,9 @@ button,
     flex-shrink: 0;
     display: block;
     margin: 0 0 2em 4em;
-    width: 50%; }
+    width: 50%; 
+    /*top: 2em;*/
+  }
     #banner .image img {
       height: 100%;
       -moz-object-fit: cover;
@@ -2187,7 +2189,9 @@ button,
       -webkit-object-position: center;
       -ms-object-position: center;
       object-position: center;
-      width: 100%; }
+      width: 100%; 
+
+    }
   @media screen and (orientation: portrait) {
     #banner {
       -moz-flex-direction: column-reverse;
@@ -2362,5 +2366,16 @@ a:hover {
       left: 24em;
     }
   }
+}
+
+#banner .image.dani-pic{
+  margin-top: 0em; /* si somma al margin-top attuale (che è 0) */
+}
+
+#header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fafafa;
 }
 
