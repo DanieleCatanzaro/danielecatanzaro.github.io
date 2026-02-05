@@ -2390,5 +2390,5 @@ a:hover {
 }
 
 #main > .inner{
-  padding-top: calc(4.5em + env(safe-area-inset-top));
+  padding-top: calc(1.5em + env(safe-area-inset-top));
 }
