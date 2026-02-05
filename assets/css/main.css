@@ -2388,3 +2388,6 @@ a:hover {
   padding-top: env(safe-area-inset-top, 0px);
 }
 
+#main > .inner{
+  padding-top: 2.5em; /* regola finché combacia */
+}
