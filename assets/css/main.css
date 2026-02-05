@@ -2066,7 +2066,7 @@ button,
         display: none; } }
   @media screen and (max-width: 736px) {
     #header {
-      padding-top: 5em;
+      padding-top: -5em;
     }
     #sidebar .toggle {
       text-indent: 7.25em;
@@ -2109,12 +2109,30 @@ button,
     font-size: 1.125em; }
   #header .icons {
     text-align: right; }
+
+  @media screen and (max-width: 8000px) {
+    #header {
+      padding-top: 2.55em; } 
+  } 
+
+  @media screen and (max-width: 1780px) {
+    #header {
+      padding-top: 2.5em; } 
+  }  
+
   @media screen and (max-width: 1680px) {
     #header {
-      padding-top: 3em; } }
+      padding-top: 1.95em; } 
+  } 
+
+  @media screen and (max-width: 1280px) {
+    #header {
+      padding-top: 1.78em; } 
+  } 
+
   @media screen and (max-width: 736px) {
     #header {
-      padding-top: 3em; }
+      padding-top: 0.18em; }
       #header .logo {
         font-size: 1.25em;
         margin: 0; }
@@ -2123,7 +2141,10 @@ button,
         line-height: 5em;
         position: absolute;
         right: -0.5em;
-        top: 0; } }
+        top: 0; } 
+    }
+ 
+
 
 /* Banner */
 #banner {
@@ -2314,3 +2335,32 @@ a:hover {
   color: #a9bcc2;
   border-bottom-color: #a9bcc2;
 }    
+
+/* Hamburger che segue lo scroll su iPad+Mac */
+@media screen and (min-width: 737px) {
+
+  /* rende l'hamburger "floating" */
+  #sidebar .toggle {
+    position: fixed;          /* invece di absolute */
+    top: 1.25em;              /* abbassalo quanto vuoi */
+    z-index: 10001;
+  }
+
+  /* quando la sidebar è APERTA: mettilo a filo del bordo della sidebar */
+  #sidebar:not(.inactive) .toggle {
+    left: 26em;               /* larghezza sidebar desktop */
+  }
+
+  /* quando la sidebar è CHIUSA: tienilo vicino al bordo sinistro */
+  #sidebar.inactive .toggle {
+    left: 1em;
+  }
+
+  /* breakpoint dove la sidebar diventa 24em */
+  @media screen and (max-width: 1680px) {
+    #sidebar:not(.inactive) .toggle {
+      left: 24em;
+    }
+  }
+}
+
