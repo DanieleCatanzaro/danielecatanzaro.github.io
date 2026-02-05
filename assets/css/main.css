@@ -2370,7 +2370,7 @@ a:hover {
 }
 
 #header{
-  /*position: -webkit-sticky; /* iOS */*/
+  position: -webkit-sticky; /* iOS */
   position: sticky;
   top: env(safe-area-inset-top, 0px); /* copre notch/status bar */
   z-index: 1000;
@@ -2384,7 +2384,11 @@ a:hover {
 }
 
 @media screen and (max-width: 736px){
-  #header{ padding-top: 0 !important; }
+  #header{ 
+    padding-top: 0 !important; 
+    position: relative !important;
+    top: auto !important;    
+  }
 }
 
 #main > .inner{
