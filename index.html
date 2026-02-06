@@ -2115,5 +2115,25 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
       a.textContent = addr;
       })();
     </script>
+
+    <script>
+    const toggle = document.getElementById("theme-toggle");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    } else if (prefersDark) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+
+    toggle.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-theme");
+      const next = current === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    });
+    </script>
+
   </body>
 </html>
