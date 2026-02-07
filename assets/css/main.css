@@ -2307,12 +2307,12 @@ button,
         max-height: 50vh;
         min-height: 18em;
         width: 100%; } }
-  @media screen and (orientation: portrait) and (max-width: 1000) {
+  @media screen and (orientation: portrait) and (max-width: 1200) {
     #banner .image {
-      max-height: 55vh; } }
+      max-height: 75vh; } }
 
 /* iPad/tablet in portrait: lascia l'immagine alla sua altezza naturale */
-@media screen and (orientation: portrait) and (min-width: 1001px) and (max-width: 1400px) {
+@media screen and (orientation: portrait) and (min-width: 1201px) and (max-width: 1600px) {
   #banner .image {
     height: auto;
   }
