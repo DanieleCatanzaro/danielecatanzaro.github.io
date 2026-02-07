@@ -9,6 +9,18 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <title>
       Daniele Catanzaro's Webpage
     </title>
+    <script>
+      (function () {
+        const hour = new Date().getHours();
+
+        // esempio: dark dalle 19:00 alle 7:00
+        const isNight = (hour >= 23 || hour < 7);
+
+        const theme = isNight ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+
     <script data-goatcounter="https://danielecatanzaro.goatcounter.com/count"
         async src="//gc.zgo.at/count.js">      
     </script>
