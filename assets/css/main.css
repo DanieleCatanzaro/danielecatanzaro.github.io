@@ -2501,6 +2501,13 @@ html[data-theme="dark"] {
   --border-strong: rgba(48, 54, 61, 1);
 }
 
+
+/* Header nav: keep <strong> text aligned with link color */
+#header nav a strong,
+#header .logo strong {
+  color: inherit;
+}
+
 /* Header navigation */
 #header nav ul li a {
   color: var(--c-nav);
