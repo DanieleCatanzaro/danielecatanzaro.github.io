@@ -2307,16 +2307,14 @@ button,
         max-height: 50vh;
         min-height: 18em;
         width: 100%; } }
-  @media screen and (orientation: portrait) and (max-width: 480px) {
+  @media screen and (orientation: portrait) and (max-width: 1000) {
     #banner .image {
-      max-height: 35vh; } }
+      max-height: 55vh; } }
 
 /* iPad/tablet in portrait: lascia l'immagine alla sua altezza naturale */
-@media screen and (orientation: portrait) and (min-width: 481px) and (max-width: 1324px) {
+@media screen and (orientation: portrait) and (min-width: 1001px) and (max-width: 1400px) {
   #banner .image {
     height: auto;
-    max-height: none;
-    min-height: 0;
   }
 
   #banner .image img {
@@ -2532,4 +2530,25 @@ html[data-theme="dark"] {
 :root[data-theme="dark"],
 html[data-theme="dark"] {
   --c-nav: var(--c-heading);
+}
+
+/* ============================================================
+   BANNER – CROP CONTROLLATO (FOCUS SUL VOLTO)
+   ============================================================ */
+
+/* Manteniamo il comportamento del template ma controlliamo il crop */
+#banner .image {
+  overflow: hidden;                 /* necessario per il crop */
+}
+
+/* Immagine: riempi il box ma scegli TU cosa resta visibile */
+#banner .image img {
+  display: block;
+  width: 100%;
+  height: 0%;
+
+  object-fit: cover;                /* crop voluto */
+  object-position: 50% 20%;          /* <-- CENTRA IL VOLTO */
+
+  transform: none;
 }
