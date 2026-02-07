@@ -270,7 +270,7 @@ h6 {
   h1 {
     font-size: 3.25em; } }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 979px) {
   h1 {
     font-size: 2em;
     line-height: 1.4; }
@@ -833,7 +833,7 @@ hr {
           margin-top: -3em; }
           .row.gtr-200.gtr-uniform > * {
             padding-top: 3em; } }
-  @media screen and (max-width: 736px) {
+  @media screen and (max-width: 979px) {
     .row {
       display: flex;
       flex-wrap: wrap;
@@ -1901,7 +1901,7 @@ button,
         height: 100%; }
       .posts article:nth-last-child(1):after, .posts article:nth-last-child(2):after {
         display: none; } }
-  @media screen and (max-width: 736px) {
+  @media screen and (max-width: 979px) {
     .posts {
       margin: 0 0 2em -4.5em;
       width: calc(100% + 4.5em); }
@@ -1974,7 +1974,7 @@ button,
       padding: 0 4em 0.1em 4em ; }
       #main > .inner > section {
         padding: 4em 0 2em 0 ; } }
-  @media screen and (max-width: 736px) {
+  @media screen and (max-width: 979px) {
     #main > .inner {
       padding: 0 2em 0.1em 2em ; }
       #main > .inner > section {
@@ -2150,7 +2150,7 @@ button,
           margin-left: -0.4375em; }
       body.is-preload #sidebar {
         display: none; } }
-  @media screen and (max-width: 736px) {
+  @media screen and (max-width: 979px) {
     #sidebar .toggle {
       text-indent: 7.25em;
       width: 7.25em; }
@@ -2213,7 +2213,7 @@ button,
       padding-top: 1.78em; } 
   } 
 
-  @media screen and (max-width: 736px) {
+  @media screen and (max-width: 979px) {
     #header {
       padding-top: 0.18em; }
       #header .logo {
@@ -2312,7 +2312,7 @@ button,
       max-height: 75vh; } }
 
 /* iPad/tablet in portrait: lascia l'immagine alla sua altezza naturale */
-@media screen and (orientation: portrait) and (min-width: 1201px) and (max-width: 1600px) {
+@media screen and (orientation: portrait) and (min-width: 1201px) {
   #banner .image {
     height: auto;
   }
@@ -2467,7 +2467,7 @@ a:hover {
   -webkit-transform: translateZ(0);
 }
 
-@media screen and (max-width: 736px){
+@media screen and (max-width: 979px){
   #header{ 
     padding-top: 0; 
     position: relative !important;
