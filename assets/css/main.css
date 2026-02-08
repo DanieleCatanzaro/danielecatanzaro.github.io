@@ -2229,86 +2229,42 @@ button,
  
 
 
-/* Banner */
+/* Banner (forced portrait layout) */
 #banner {
-  padding: 6em 0 4em 0 ;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex; }
-  #banner h1 {
-    margin-top: -0.125em; }
-  #banner .content {
-    -moz-flex-grow: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-grow: 1;
-    flex-grow: 1;
-    -moz-flex-shrink: 1;
-    -webkit-flex-shrink: 1;
-    -ms-flex-shrink: 1;
-    flex-shrink: 1;
-    width: 50%; }
-  #banner .image {
-    -moz-flex-grow: 0;
-    -webkit-flex-grow: 0;
-    -ms-flex-grow: 0;
-    flex-grow: 0;
-    -moz-flex-shrink: 0;
-    -webkit-flex-shrink: 0;
-    -ms-flex-shrink: 0;
-    flex-shrink: 0;
-    display: block;
-    margin: 0 0 2em 4em;
-    width: 50%; 
-    /*top: 2em;*/
-  }
-    #banner .image img {
-      height: 100%;
-      -moz-object-fit: cover;
-      -webkit-object-fit: cover;
-      -ms-object-fit: cover;
-      object-fit: cover;
-      -moz-object-position: center;
-      -webkit-object-position: center;
-      -ms-object-position: center;
-      object-position: center;
-      width: 100%; 
+  padding: 6em 0 4em 0;
+  display: flex;
+  flex-direction: column-reverse; /* use 'column' if you want image above text */
+}
 
-    }
-  @media screen and (orientation: portrait) {
-    #banner {
-      -moz-flex-direction: column-reverse;
-      -webkit-flex-direction: column-reverse;
-      -ms-flex-direction: column-reverse;
-      flex-direction: column-reverse; }
-      #banner h1 br {
-        display: none; }
-      #banner .content {
-        -moz-flex-grow: 0;
-        -webkit-flex-grow: 0;
-        -ms-flex-grow: 0;
-        flex-grow: 0;
-        -moz-flex-shrink: 0;
-        -webkit-flex-shrink: 0;
-        -ms-flex-shrink: 0;
-        flex-shrink: 0;
-        width: 100%; }
-      #banner .image {
-        -moz-flex-grow: 0;
-        -webkit-flex-grow: 0;
-        -ms-flex-grow: 0;
-        flex-grow: 0;
-        -moz-flex-shrink: 0;
-        -webkit-flex-shrink: 0;
-        -ms-flex-shrink: 0;
-        flex-shrink: 0;
-        margin: 0 0 4em 0;
-        height: 25em;
-        max-height: 50vh;
-        min-height: 18em;
-        width: 100%; } }
+#banner h1 {
+  margin-top: -0.125em;
+}
 
+#banner h1 br {
+  display: none;
+}
 
+#banner .content {
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+#banner .image {
+  width: 100%;
+  margin: 0 0 4em 0;
+
+  /* Stable crop box */
+  aspect-ratio: 16 / 9;   /* change to 21/9, 4/3, ... */
+  overflow: hidden;
+}
+
+#banner .image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+}
 
 
 /* Footer */
@@ -2473,6 +2429,7 @@ a:hover {
    ===================== */
 :root[data-theme="dark"],
 html[data-theme="dark"] {
+  /* Match the dark palette used in prefers-color-scheme */
   --c-bg: #0d1117;
   --c-bg-alt: #161b22;
   --c-surface: #161b22;
@@ -2480,11 +2437,19 @@ html[data-theme="dark"] {
   --c-text: #c9d1d9;
   --c-text-muted: #8b949e;
   --c-heading: #f0f6fc;
+  --c-nav: var(--c-heading);
 
   --c-accent: #58a6ff;
   --c-accent-hover: #79c0ff;
 
-  --border-strong: rgba(48, 54, 61, 1);
+  --c-danger: #ff7b72;
+  --c-danger-strong: #ffa198;
+
+  --border-strong: #30363d;
+  --border-soft: rgba(48, 54, 61, 0.6);
+
+  --c-code-bg: #161b22;
+  --c-code-border: #30363d;
 }
 
 .page-footer {
@@ -2513,73 +2478,5 @@ html[data-theme="dark"] {
 #header nav a:hover {
   color: var(--c-accent);
 }
-
-/* Nav & headings color in dark mode */
-:root[data-theme="dark"],
-html[data-theme="dark"] {
-  --c-nav: var(--c-heading);
-}
-
-/* ============================================================
-   BANNER – CROP CONTROLLATO (FOCUS SUL VOLTO)
-   ============================================================ */
-
-/* Manteniamo il comportamento del template ma controlliamo il crop */
-#banner .image {
-  overflow: hidden;                 /* necessario per il crop */
-}
-
-
-/* FORZA SEMPRE LAYOUT "PORTRAIT" (colonna) */
-#banner {
-  flex-direction: column-reverse; /* oppure column: vedi nota sotto */
-}
-
-#banner .content {
-  width: 100%;
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-
-#banner .image {
-  width: 100%;
-  margin: 0 0 4em 0;
-
-  /* box con altezza => crop stabile */
-  aspect-ratio: 16 / 9;   /* o 21 / 9 */
-
-  overflow: hidden;
-}
-
-#banner .image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 20%;
-  display: block;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
