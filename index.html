@@ -21,77 +21,73 @@
     <link href="assets/css/main.css" rel="stylesheet"/>
     <style>
       .top-nav {
-        position: relative;
-        display: flex;
+        position: fixed;
+        top: max(0.8rem, env(safe-area-inset-top));
+        right: max(0.8rem, env(safe-area-inset-right));
+        display: inline-flex;
         justify-content: flex-end;
-        align-items: center;
+        align-items: flex-start;
+        z-index: 2100;
       }
 
       .top-nav .nav-links {
+        position: absolute;
+        top: calc(100% + 0.45em);
+        right: 0;
+        min-width: 14rem;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 0.75em 1em;
+        border: 1px solid var(--border-strong);
+        border-radius: var(--radius);
+        background: var(--c-bg-alt);
+        box-shadow: 0 0.9em 2.2em rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-0.4em);
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+        z-index: 2000;
+      }
+
+      body.menu-open .top-nav .nav-links {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .top-nav .nav-links a {
+        margin-right: 0 !important;
+        border-bottom: 0;
+        width: 100%;
+        padding: 0.2em 0;
+      }
+
+      .top-nav .nav-links .theme-toggle {
+        align-self: flex-end;
+        width: auto;
+        margin-top: 0.25em;
       }
 
       .nav-toggle {
-        display: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--border-strong);
+        border-radius: var(--radius);
+        background: var(--c-bg-alt);
+        color: var(--c-heading);
+        width: 2.6em;
+        height: 2.6em;
+        cursor: pointer;
       }
 
       @media screen and (max-width: 736px) {
         .top-nav .nav-links {
-          position: absolute;
-          top: calc(100% + 0.45em);
-          right: 0;
           min-width: 13.5rem;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 0;
-          padding: 0.75em 1em;
-          border: 1px solid var(--border-strong);
-          border-radius: var(--radius);
-          background: var(--c-bg-alt);
-          box-shadow: 0 0.9em 2.2em rgba(0, 0, 0, 0.2);
-          opacity: 0;
-          visibility: hidden;
-          pointer-events: none;
-          transform: translateY(-0.4em);
-          transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
-          z-index: 2000;
-        }
-
-        body.menu-open .top-nav .nav-links {
-          opacity: 1;
-          visibility: visible;
-          pointer-events: auto;
-          transform: translateY(0);
-        }
-
-        .top-nav .nav-links a {
-          margin-right: 0 !important;
-          border-bottom: 0;
-          width: 100%;
-          padding: 0.2em 0;
-        }
-
-        .top-nav .nav-links .theme-toggle {
-          align-self: flex-end;
-          width: auto;
-          margin-top: 0.25em;
-        }
-
-        .nav-toggle {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          border: 1px solid var(--border-strong);
-          border-radius: var(--radius);
-          background: var(--c-bg-alt);
-          color: var(--c-heading);
-          width: 2.5em;
-          height: 2.5em;
-          cursor: pointer;
         }
       }
     </style>
@@ -976,8 +972,6 @@
           return;
         }
 
-        const mobileQuery = window.matchMedia('(max-width: 736px)');
-
         function closeMenu() {
           document.body.classList.remove('menu-open');
           navToggle.setAttribute('aria-expanded', 'false');
@@ -989,7 +983,7 @@
         });
 
         document.addEventListener('click', function (event) {
-          if (!mobileQuery.matches || !document.body.classList.contains('menu-open')) {
+          if (!document.body.classList.contains('menu-open')) {
             return;
           }
 
@@ -1008,23 +1002,9 @@
 
         navPanel.querySelectorAll('a[href]').forEach(function (link) {
           link.addEventListener('click', function () {
-            if (mobileQuery.matches) {
-              closeMenu();
-            }
+            closeMenu();
           });
         });
-
-        function resetOnDesktop() {
-          if (!mobileQuery.matches) {
-            closeMenu();
-          }
-        }
-
-        if (mobileQuery.addEventListener) {
-          mobileQuery.addEventListener('change', resetOnDesktop);
-        } else {
-          mobileQuery.addListener(resetOnDesktop);
-        }
       })();
     </script>
 
