@@ -84,13 +84,12 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid var(--border-strong);
-        border-radius: var(--radius);
-        background: var(--c-bg-alt);
         color: var(--c-heading);
-        width: 2.6em;
-        height: 2.6em;
-        cursor: pointer;
+        border-bottom: 0;
+        width: auto;
+        height: auto;
+        padding: 0;
+        font-size: 1.2em;
       }
 
       @media screen and (max-width: 736px) {
@@ -113,9 +112,9 @@
                 <a class="theme-toggle" href="#" id="theme-toggle" aria-label="Toggle dark mode">
                   <i class="icon solid fa-moon"></i>
                 </a>
-                <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+                <a class="nav-toggle" id="nav-toggle" href="#" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-nav-panel" role="button">
                   <i class="icon solid fa-bars"></i>
-                </button>
+                </a>
                 <div class="nav-links" id="mobile-nav-panel">
                   <a class="logo" href="index.html" style="margin-right: 6px;">
                     <strong>Homepage</strong>
@@ -993,7 +992,8 @@
           navToggle.setAttribute('aria-expanded', 'false');
         }
 
-        navToggle.addEventListener('click', function () {
+        navToggle.addEventListener('click', function (event) {
+          event.preventDefault();
           const isOpen = document.body.classList.toggle('menu-open');
           navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
