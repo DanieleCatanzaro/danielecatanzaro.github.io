@@ -6,11 +6,8 @@
     </title>
     <script>
       (function () {
-      const hour = new Date().getHours();
-      // esempio: dark dalle 19:00 alle 7:00
-      const isNight = (hour >= 23 || hour < 7);
-      const theme = isNight ? "dark" : "light";
-      document.documentElement.setAttribute("data-theme", theme);
+      // Il sito viene sempre caricato in modalità scura.
+      document.documentElement.setAttribute("data-theme", "dark");
       })();
     </script>
     <script data-goatcounter="https://danielecatanzaro.goatcounter.com/count"
@@ -1052,11 +1049,7 @@
       const toggle = document.getElementById('theme-toggle');
       const icon = toggle.querySelector('i');
 
-      const storedTheme = localStorage.getItem('theme');
-
-      if (storedTheme) {
-        root.setAttribute('data-theme', storedTheme);
-      }
+      // Nessun ripristino del tema salvato: ogni caricamento parte in modalità scura.
 
       function updateIcon() {
         const isDark = root.getAttribute('data-theme') === 'dark';
